@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/1259a1766_1.js"></script>
+        <script src="data/566a1259_2.js"></script>
+        <script src="data/240a565_3.js"></script>
+        <script src="data/65a239_4.js"></script>
+        <script src="data/2a64_5.js"></script>
+        <script src="data/1_6.js"></script>
+        <script src="data/MunicipiosconFolio8_7.js"></script>
+        <script src="data/Entidades_8.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[12.806789989539121,-124.71181568098572],[38.941870303859716,-77.75682743214372]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var measureControl = new L.Control.Measure({
+            position: 'topleft',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .className += ' fas fa-ruler';
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_Positron_0');
+        map.getPane('pane_Positron_0').style.zIndex = 400;
+        var layer_Positron_0 = L.tileLayer('https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+            pane: 'pane_Positron_0',
+            opacity: 1.0,
+            attribution: '<a href="https://cartodb.com/basemaps/">Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.</a>',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 20
+        });
+        layer_Positron_0;
+        map.addLayer(layer_Positron_0);
+        function pop_1259a1766_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">fid</th>\
+                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVEGEO</th>\
+                        <td>' + (feature.properties['CVEGEO'] !== null ? autolinker.link(feature.properties['CVEGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_ENT</th>\
+                        <td>' + (feature.properties['CVE_ENT'] !== null ? autolinker.link(feature.properties['CVE_ENT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_MUN</th>\
+                        <td>' + (feature.properties['CVE_MUN'] !== null ? autolinker.link(feature.properties['CVE_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NOMGEO</th>\
+                        <td>' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Folio_8</th>\
+                        <td>' + (feature.properties['Folio_8'] !== null ? autolinker.link(feature.properties['Folio_8'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_1259a1766_1_0() {
+            return {
+                pane: 'pane_1259a1766_1',
+                opacity: 1,
+                color: 'rgba(227,227,227,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(37,52,148,0.6509803921568628)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_1259a1766_1');
+        map.getPane('pane_1259a1766_1').style.zIndex = 401;
+        map.getPane('pane_1259a1766_1').style['mix-blend-mode'] = 'normal';
+        var layer_1259a1766_1 = new L.geoJson(json_1259a1766_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_1259a1766_1',
+            layerName: 'layer_1259a1766_1',
+            pane: 'pane_1259a1766_1',
+            onEachFeature: pop_1259a1766_1,
+            style: style_1259a1766_1_0,
+        });
+        bounds_group.addLayer(layer_1259a1766_1);
+        function pop_566a1259_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">fid</th>\
+                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVEGEO</th>\
+                        <td>' + (feature.properties['CVEGEO'] !== null ? autolinker.link(feature.properties['CVEGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_ENT</th>\
+                        <td>' + (feature.properties['CVE_ENT'] !== null ? autolinker.link(feature.properties['CVE_ENT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_MUN</th>\
+                        <td>' + (feature.properties['CVE_MUN'] !== null ? autolinker.link(feature.properties['CVE_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NOMGEO</th>\
+                        <td>' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Folio_8</th>\
+                        <td>' + (feature.properties['Folio_8'] !== null ? autolinker.link(feature.properties['Folio_8'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_566a1259_2_0() {
+            return {
+                pane: 'pane_566a1259_2',
+                opacity: 1,
+                color: 'rgba(227,227,227,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(43,112,177,0.6509803921568628)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_566a1259_2');
+        map.getPane('pane_566a1259_2').style.zIndex = 402;
+        map.getPane('pane_566a1259_2').style['mix-blend-mode'] = 'normal';
+        var layer_566a1259_2 = new L.geoJson(json_566a1259_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_566a1259_2',
+            layerName: 'layer_566a1259_2',
+            pane: 'pane_566a1259_2',
+            onEachFeature: pop_566a1259_2,
+            style: style_566a1259_2_0,
+        });
+        bounds_group.addLayer(layer_566a1259_2);
+        function pop_240a565_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">fid</th>\
+                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVEGEO</th>\
+                        <td>' + (feature.properties['CVEGEO'] !== null ? autolinker.link(feature.properties['CVEGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_ENT</th>\
+                        <td>' + (feature.properties['CVE_ENT'] !== null ? autolinker.link(feature.properties['CVE_ENT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_MUN</th>\
+                        <td>' + (feature.properties['CVE_MUN'] !== null ? autolinker.link(feature.properties['CVE_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NOMGEO</th>\
+                        <td>' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Folio_8</th>\
+                        <td>' + (feature.properties['Folio_8'] !== null ? autolinker.link(feature.properties['Folio_8'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_240a565_3_0() {
+            return {
+                pane: 'pane_240a565_3',
+                opacity: 1,
+                color: 'rgba(227,227,227,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(57,160,191,0.6509803921568628)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_240a565_3');
+        map.getPane('pane_240a565_3').style.zIndex = 403;
+        map.getPane('pane_240a565_3').style['mix-blend-mode'] = 'normal';
+        var layer_240a565_3 = new L.geoJson(json_240a565_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_240a565_3',
+            layerName: 'layer_240a565_3',
+            pane: 'pane_240a565_3',
+            onEachFeature: pop_240a565_3,
+            style: style_240a565_3_0,
+        });
+        bounds_group.addLayer(layer_240a565_3);
+        function pop_65a239_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">fid</th>\
+                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVEGEO</th>\
+                        <td>' + (feature.properties['CVEGEO'] !== null ? autolinker.link(feature.properties['CVEGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_ENT</th>\
+                        <td>' + (feature.properties['CVE_ENT'] !== null ? autolinker.link(feature.properties['CVE_ENT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_MUN</th>\
+                        <td>' + (feature.properties['CVE_MUN'] !== null ? autolinker.link(feature.properties['CVE_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NOMGEO</th>\
+                        <td>' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Folio_8</th>\
+                        <td>' + (feature.properties['Folio_8'] !== null ? autolinker.link(feature.properties['Folio_8'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_65a239_4_0() {
+            return {
+                pane: 'pane_65a239_4',
+                opacity: 1,
+                color: 'rgba(227,227,227,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(103,196,190,0.6509803921568628)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_65a239_4');
+        map.getPane('pane_65a239_4').style.zIndex = 404;
+        map.getPane('pane_65a239_4').style['mix-blend-mode'] = 'normal';
+        var layer_65a239_4 = new L.geoJson(json_65a239_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_65a239_4',
+            layerName: 'layer_65a239_4',
+            pane: 'pane_65a239_4',
+            onEachFeature: pop_65a239_4,
+            style: style_65a239_4_0,
+        });
+        bounds_group.addLayer(layer_65a239_4);
+        function pop_2a64_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">fid</th>\
+                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVEGEO</th>\
+                        <td>' + (feature.properties['CVEGEO'] !== null ? autolinker.link(feature.properties['CVEGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_ENT</th>\
+                        <td>' + (feature.properties['CVE_ENT'] !== null ? autolinker.link(feature.properties['CVE_ENT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_MUN</th>\
+                        <td>' + (feature.properties['CVE_MUN'] !== null ? autolinker.link(feature.properties['CVE_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NOMGEO</th>\
+                        <td>' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Folio_8</th>\
+                        <td>' + (feature.properties['Folio_8'] !== null ? autolinker.link(feature.properties['Folio_8'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_2a64_5_0() {
+            return {
+                pane: 'pane_2a64_5',
+                opacity: 1,
+                color: 'rgba(227,227,227,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(180,225,185,0.6509803921568628)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_2a64_5');
+        map.getPane('pane_2a64_5').style.zIndex = 405;
+        map.getPane('pane_2a64_5').style['mix-blend-mode'] = 'normal';
+        var layer_2a64_5 = new L.geoJson(json_2a64_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_2a64_5',
+            layerName: 'layer_2a64_5',
+            pane: 'pane_2a64_5',
+            onEachFeature: pop_2a64_5,
+            style: style_2a64_5_0,
+        });
+        bounds_group.addLayer(layer_2a64_5);
+        function pop_1_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">fid</th>\
+                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVEGEO</th>\
+                        <td>' + (feature.properties['CVEGEO'] !== null ? autolinker.link(feature.properties['CVEGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_ENT</th>\
+                        <td>' + (feature.properties['CVE_ENT'] !== null ? autolinker.link(feature.properties['CVE_ENT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CVE_MUN</th>\
+                        <td>' + (feature.properties['CVE_MUN'] !== null ? autolinker.link(feature.properties['CVE_MUN'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">NOMGEO</th>\
+                        <td>' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Folio_8</th>\
+                        <td>' + (feature.properties['Folio_8'] !== null ? autolinker.link(feature.properties['Folio_8'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_1_6_0() {
+            return {
+                pane: 'pane_1_6',
+                opacity: 1,
+                color: 'rgba(227,227,227,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,255,204,0.6509803921568628)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_1_6');
+        map.getPane('pane_1_6').style.zIndex = 406;
+        map.getPane('pane_1_6').style['mix-blend-mode'] = 'normal';
+        var layer_1_6 = new L.geoJson(json_1_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_1_6',
+            layerName: 'layer_1_6',
+            pane: 'pane_1_6',
+            onEachFeature: pop_1_6,
+            style: style_1_6_0,
+        });
+        bounds_group.addLayer(layer_1_6);
+        function pop_MunicipiosconFolio8_7(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_MunicipiosconFolio8_7_0() {
+            return {
+                pane: 'pane_MunicipiosconFolio8_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,0.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(225,89,137,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_MunicipiosconFolio8_7');
+        map.getPane('pane_MunicipiosconFolio8_7').style.zIndex = 407;
+        map.getPane('pane_MunicipiosconFolio8_7').style['mix-blend-mode'] = 'normal';
+        var layer_MunicipiosconFolio8_7 = new L.geoJson(json_MunicipiosconFolio8_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_MunicipiosconFolio8_7',
+            layerName: 'layer_MunicipiosconFolio8_7',
+            pane: 'pane_MunicipiosconFolio8_7',
+            onEachFeature: pop_MunicipiosconFolio8_7,
+            style: style_MunicipiosconFolio8_7_0,
+        });
+        bounds_group.addLayer(layer_MunicipiosconFolio8_7);
+        function pop_Entidades_8(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CVEGEO'] !== null ? autolinker.link(feature.properties['CVEGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CVE_ENT'] !== null ? autolinker.link(feature.properties['CVE_ENT'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NOMGEO'] !== null ? autolinker.link(feature.properties['NOMGEO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['IA'] !== null ? autolinker.link(feature.properties['IA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Entidades_8_0() {
+            return {
+                pane: 'pane_Entidades_8',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(225,89,137,0.0)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Entidades_8');
+        map.getPane('pane_Entidades_8').style.zIndex = 408;
+        map.getPane('pane_Entidades_8').style['mix-blend-mode'] = 'normal';
+        var layer_Entidades_8 = new L.geoJson(json_Entidades_8, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Entidades_8',
+            layerName: 'layer_Entidades_8',
+            pane: 'pane_Entidades_8',
+            onEachFeature: pop_Entidades_8,
+            style: style_Entidades_8_0,
+        });
+        bounds_group.addLayer(layer_Entidades_8);
+        map.addLayer(layer_Entidades_8);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/Entidades_8.png" /> Entidades': layer_Entidades_8,'<img src="legend/MunicipiosconFolio8_7.png" /> Municipios con Folio 8': layer_MunicipiosconFolio8_7,'<img src="legend/1_6.png" /> 1': layer_1_6,'<img src="legend/2a64_5.png" /> 2 a 64': layer_2a64_5,'<img src="legend/65a239_4.png" /> 65 a 239': layer_65a239_4,'<img src="legend/240a565_3.png" /> 240 a 565': layer_240a565_3,'<img src="legend/566a1259_2.png" /> 566 a 1,259': layer_566a1259_2,'<img src="legend/1259a1766_1.png" /> 1,259 a 1,766': layer_1259a1766_1,"Positron": layer_Positron_0,},{collapsed:false}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
