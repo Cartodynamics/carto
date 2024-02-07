@@ -37,7 +37,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[16.02732442593909,-109.38827022945296],[30.739839860171703,-90.38274249255872]]);
+        }).fitBounds([[12.435818950224375,-129.48653134210406],[37.11503648413508,-72.74840659365714]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -247,7 +247,7 @@
         bounds_group.addLayer(layer_Entidades_3);
         map.addLayer(layer_Entidades_3);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Entidades_3.png" /> Entidades': layer_Entidades_3,'Volumen subterráneos<br /><table><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_55162397210.png" /></td><td>55 - 16239721</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_16239721499396551.png" /></td><td>16239721 - 49939655</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_499396551072290332.png" /></td><td>49939655 - 107229033</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_1072290332294094163.png" /></td><td>107229033 - 229409416</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_2294094164269950594.png" /></td><td>229409416 - 426995059</td></tr></table>': layer_Volumensubterrneos_2,"Positron": layer_Positron_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Entidades_3.png" /> Entidades': layer_Entidades_3,'Volumen subterráneos<br /><table><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_55162397210.png" /></td><td>55 - 16,239,721</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_16239721499396551.png" /></td><td>16,239,721 - 49,939,655</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_499396551072290332.png" /></td><td>49,939,655 - 107,229,033</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_1072290332294094163.png" /></td><td>107,229,033 - 229,409,416</td></tr><tr><td style="text-align: center;"><img src="legend/Volumensubterrneos_2_2294094164269950594.png" /></td><td>229,409,416 - 426,995,059</td></tr></table>': layer_Volumensubterrneos_2,"Positron": layer_Positron_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
