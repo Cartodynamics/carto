@@ -1,0 +1,1 @@
+var json_Terminaldecargadeamoniaco_10 = {"type":"FeatureCollection","name":"Terminaldecargadeamoniaco_10","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","ID":2.0,"Nombre":"Terminal de carga de amoniaco"},"geometry":{"type":"Point","coordinates":[-95.204610838420507,16.159585189716758]}}]}

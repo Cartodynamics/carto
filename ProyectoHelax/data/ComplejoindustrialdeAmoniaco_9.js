@@ -1,0 +1,1 @@
+var json_ComplejoindustrialdeAmoniaco_9 = {"type":"FeatureCollection","name":"ComplejoindustrialdeAmoniaco_9","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","ID":3.0,"Nombre":"Complejo industrial de Amoniaco"},"geometry":{"type":"Point","coordinates":[-95.273165245361426,16.181830324689646]}}]}

@@ -1,0 +1,1 @@
+var json_Plantadecaptacindeagua_11 = {"type":"FeatureCollection","name":"Plantadecaptacindeagua_11","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","ID":1.0,"Nombre":"Planta de captación de agua"},"geometry":{"type":"Point","coordinates":[-95.220434878862235,16.159629705857991]}}]}
